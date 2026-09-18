@@ -4,187 +4,814 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Md Shakinul Islam - Flutter & Cross-Platform Mobile App Developer">
-    <meta name="keywords" content="Flutter Developer, Dart, Mobile App Developer, Android Developer, Firebase, AI">
-    <meta name="author" content="Md Shakinul Islam">
     <title>Md Shakinul Islam | Flutter Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">Shakinul<span>.</span></div>
+
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Training</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
         <div class="burger">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hello">Hello, I'm</p>
-                <h1>Md Shakinul Islam</h1>
-                <h3>Flutter & Cross-Platform Mobile App Developer</h3>
-                <p class="hero-description">
-                    I build secure, scalable, real-time and AI-powered
-                    mobile applications using Flutter, Dart, Firebase and modern APIs.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="https://github.com/shakinul-islam" target="_blank" class="btn secondary">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+
+    <!-- Main Portfolio Content -->
+    <main id="main-content">
+
+        <!-- Hero -->
+        <header id="home" class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <p class="hello">Hello, I'm</p>
+
+                    <h1>Md Shakinul Islam</h1>
+
+                    <h3>Flutter & Cross-Platform Mobile App Developer</h3>
+
+                    <p class="hero-description">
+                        I build secure, scalable, real-time and AI-powered
+                        mobile applications using Flutter, Dart, Firebase and modern APIs.
+                    </p>
+
+                    <div class="cta-buttons">
+
+                        <a href="#projects" class="btn primary">
+                            View My Work
+                        </a>
+
+                        <a href="https://github.com/shakinul-islam"
+                           target="_blank"
+                           class="btn secondary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+
+                    </div>
+
                 </div>
+
+                <div class="hero-image">
+                    <img src="profile.jpg"
+                         onerror="this.onerror=null; this.src='profile.png';"
+                         alt="Md Shakinul Islam">
+                </div>
+
             </div>
-            
-            <!-- Profile Image Section -->
-            <div class="hero-image">
-                <img src="profile.png" alt="Md Shakinul Islam">
+
+        </header>
+
+
+        <!-- About -->
+        <section id="about" class="about">
+
+            <h2 class="section-title">About Me</h2>
+
+            <p>
+                I am a Computer Science graduate and Mobile App Developer
+                specializing in Flutter and Dart. I focus on building
+                user-friendly, scalable and real-world applications with
+                modern UI/UX, Firebase, REST APIs, databases,
+                real-time communication and AI integration.
+            </p>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills" class="skills">
+
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Flutter & Dart</h4>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-android"></i>
+                    <h4>Java & Android</h4>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-fire"></i>
+                    <h4>Firebase</h4>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-robot"></i>
+                    <h4>AI Integration</h4>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-comments"></i>
+                    <h4>Real-Time Apps</h4>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h4>Git & GitHub</h4>
+                </div>
+
             </div>
+
+        </section>
+
+
+        <!-- Projects Grid -->
+        <section id="projects" class="projects">
+
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="project-grid">
+
+
+                <!-- ==============================
+                     PROJECT 1: ELITETALK
+                     ============================== -->
+
+                <div class="project-card"
+                     onclick="openProject('modal-elitetalk')">
+
+                    <div class="card-logo">
+                        <img src="logo_elitetalk.jpg"
+                             onerror="this.style.display='none'"
+                             alt="EliteTalk Logo">
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>EliteTalk</h3>
+
+                        <p>
+                            Full-stack real-time communication app with
+                            secure messaging, media sharing, AI assistant,
+                            notifications and audio/video communication.
+                        </p>
+
+                        <span class="click-hint">
+                            Click to view details
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     PROJECT 2: AI EXPENSE ANALYZER
+                     ============================== -->
+
+                <div class="project-card"
+                     onclick="openProject('modal-expense')">
+
+                    <div class="card-logo">
+                        <img src="logo_expense.png"
+                             onerror="this.style.display='none'"
+                             alt="AI Expense Analyzer Logo">
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>AI Expense Analyzer</h3>
+
+                        <p>
+                            AI-powered personal finance app with smart
+                            expense entry, financial insights,
+                            budget monitoring and AI recommendations.
+                        </p>
+
+                        <span class="click-hint">
+                            Click to view details
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     PROJECT 3: DOKANER HISAB
+                     ============================== -->
+
+                <div class="project-card"
+                     onclick="openProject('modal-dokan')">
+
+                    <div class="card-logo">
+                        <img src="logo_dokan.png"
+                             onerror="this.style.display='none'"
+                             alt="Dokaner Hisab Logo">
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Dokaner Hisab</h3>
+
+                        <p>
+                            Smart Grocery POS and Shop Management app
+                            with inventory, billing, customer dues,
+                            expenses and financial analytics.
+                        </p>
+
+                        <span class="click-hint">
+                            Click to view details
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     PROJECT 4: CONTACTLESS DINING
+                     ============================== -->
+
+                <div class="project-card"
+                     onclick="openProject('modal-saas')">
+
+                    <div class="card-logo">
+                        <img src="logo_saas.png"
+                             onerror="this.style.display='none'"
+                             alt="Contactless Dining SaaS Logo">
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Contactless Dining SaaS</h3>
+
+                        <p>
+                            QR-based restaurant ordering and management
+                            platform with real-time order routing,
+                            analytics and role-based access.
+                        </p>
+
+                        <span class="click-hint">
+                            Click to view details
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <footer id="contact">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Open to Junior Flutter Developer opportunities.
+            </p>
+
+            <div class="social-links">
+
+                <a href="mailto:shakinulislam017@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/md-shakinul-islam-59032a279"
+                   target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/shakinul-islam"
+                   target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Md Shakinul Islam.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ==========================================
+         PROJECT DETAILS SCREENS
+         ========================================== -->
+
+
+    <!-- ==========================================
+         ELITETALK
+         ========================================== -->
+
+    <div id="modal-elitetalk" class="project-screen">
+
+        <div class="screen-header">
+
+            <button class="back-btn"
+                    onclick="closeProject('modal-elitetalk')">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+
+            <h2>EliteTalk Details</h2>
+
         </div>
-    </header>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <p>
-            I am a Computer Science graduate and Mobile App Developer
-            specializing in Flutter and Dart. I focus on building
-            user-friendly, scalable and real-world applications with
-            modern UI/UX, Firebase, REST APIs, databases, cloud services,
-            real-time communication and AI integration.
-        </p>
-    </section>
 
-    <!-- Skills -->
-    <section id="skills" class="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fas fa-mobile-alt"></i><h4>Flutter & Dart</h4></div>
-            <div class="skill-card"><i class="fab fa-android"></i><h4>Java & Android</h4></div>
-            <div class="skill-card"><i class="fas fa-fire"></i><h4>Firebase</h4></div>
-            <div class="skill-card"><i class="fas fa-server"></i><h4>REST APIs</h4></div>
-            <div class="skill-card"><i class="fas fa-database"></i><h4>MongoDB & SQLite</h4></div>
-            <div class="skill-card"><i class="fas fa-robot"></i><h4>AI Integration</h4></div>
-            <div class="skill-card"><i class="fas fa-comments"></i><h4>Real-Time Apps</h4></div>
-            <div class="skill-card"><i class="fab fa-git-alt"></i><h4>Git & GitHub</h4></div>
-        </div>
-    </section>
+        <div class="screen-body">
 
-    <!-- Experience / Training -->
-    <section id="experience" class="experience">
-        <h2 class="section-title">Experience & Training</h2>
-        <div class="experience-card">
-            <div class="experience-icon">
-                <i class="fas fa-graduation-cap"></i>
+            <!-- Image Slider -->
+
+            <div class="slider-wrapper">
+
+                <button class="slide-arrow left-arrow"
+                        onclick="slidePrev(this)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="project-slider">
+
+                    <img src="elitetalk_1.jpeg"
+                         onerror="this.onerror=null; this.src='elitetalk_1.png';"
+                         alt="EliteTalk Screenshot">
+
+                    <img src="elitetalk_2.jpg"
+                         onerror="this.onerror=null; this.src='elitetalk_2.png';"
+                         alt="EliteTalk Screenshot">
+
+                </div>
+
+                <button class="slide-arrow right-arrow"
+                        onclick="slideNext(this)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
             </div>
-            <div>
-                <h3>Flutter Developer Trainee</h3>
-                <h4>AppStick IT Firm</h4>
-                <p class="duration">3-Month Industrial Training</p>
+
+
+            <!-- Details -->
+
+            <div class="screen-info">
+
+                <h3>EliteTalk — Real-Time Communication Platform</h3>
+
                 <p>
-                    Completed hands-on training in Flutter, Dart,
-                    Firebase, REST APIs, UI/UX, state management
-                    and mobile application development.
+                    EliteTalk is a full-stack, cross-platform real-time
+                    communication application developed as part of an
+                    industrial training project. The application focuses
+                    on secure communication, real-time messaging,
+                    multimedia sharing and AI-powered interaction.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
+                <p>
+                    It supports real-time messaging with Sent, Delivered
+                    and Seen status, typing indicators, secure message
+                    requests and access control. Users can share images,
+                    videos and documents through Cloudinary.
+                </p>
 
-            <!-- EliteTalk -->
-            <div class="project-card">
-                <div class="project-slider">
-                    <img src="elitetalk_1.jpeg" alt="EliteTalk UI 1">
-                    <img src="elitetalk_2.png" alt="EliteTalk UI 2">
-                </div>
-                <div class="project-info">
-                    <div class="project-icon"><i class="fas fa-comments"></i></div>
-                    <h3>EliteTalk</h3>
-                    <p>A full-stack cross-platform real-time communication application with secure messaging, media sharing, AI assistant, notifications and real-time communication.</p>
-                    <div class="tags">
-                        <span>Flutter</span> <span>Firebase</span> <span>Cloudinary</span> <span>AI</span>
-                    </div>
-                </div>
-            </div>
+                <p>
+                    The application also includes an AI Chat Assistant
+                    powered by Groq API and Llama 3.3 70B with support
+                    for both English and Bengali. Additional features
+                    include swipe-to-reply, emoji reactions, message
+                    deletion and real-time notifications.
+                </p>
 
-            <!-- AI Expense Analyzer -->
-            <div class="project-card">
-                <div class="project-slider">
-                    <img src="expense_1.jpeg" alt="Expense App UI 1">
-                    <img src="expense_2.jpeg" alt="Expense App UI 2">
-                </div>
-                <div class="project-info">
-                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>AI Expense Analyzer</h3>
-                    <p>An AI-powered personal finance application featuring smart expense entry, financial insights, budget monitoring and AI-powered recommendations.</p>
-                    <div class="tags">
-                        <span>Flutter</span> <span>Node.js</span> <span>MongoDB</span> <span>Groq AI</span>
-                    </div>
-                </div>
-            </div>
+                <div class="tags">
 
-            <!-- Dokaner Hisab -->
-            <div class="project-card">
-                <div class="project-slider">
-                    <img src="dokan_1.jpeg" alt="Dokan App UI 1">
-                    <img src="dokan_2.jpeg" alt="Dokan App UI 2">
-                </div>
-                <div class="project-info">
-                    <div class="project-icon"><i class="fas fa-store"></i></div>
-                    <h3>Dokaner Hisab</h3>
-                    <p>A smart Grocery POS and Shop Management application with inventory management, billing, customer dues, expenses and financial analytics.</p>
-                    <div class="tags">
-                        <span>Flutter</span> <span>Firebase</span> <span>Cloud Firestore</span> <span>Charts</span>
-                    </div>
-                </div>
-            </div>
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Firebase</span>
+                    <span>Cloud Firestore</span>
+                    <span>Cloudinary</span>
+                    <span>Groq API</span>
+                    <span>Llama 3.3 70B</span>
+                    <span>OneSignal</span>
 
-            <!-- Restaurant SaaS -->
-            <div class="project-card">
-                <div class="project-slider">
-                    <img src="saas_1.jpeg" alt="Restaurant SaaS UI 1">
-                    <img src="saas_2.jpeg" alt="Restaurant SaaS UI 2">
                 </div>
-                <div class="project-info">
-                    <div class="project-icon"><i class="fas fa-qrcode"></i></div>
-                    <h3>Contactless Dining SaaS</h3>
-                    <p>A restaurant management platform with QR-based customer ordering, real-time order synchronization, role-based access and sales analytics.</p>
-                    <div class="tags">
-                        <span>Flutter</span> <span>Firebase</span> <span>OneSignal</span> <span>Cloudinary</span>
-                    </div>
+
+                <div class="project-links">
+
+                    <a href="https://github.com/shakinul-islam"
+                       target="_blank"
+                       class="btn primary">
+
+                        <i class="fab fa-github"></i>
+                        Github Repository Link
+
+                    </a>
+
                 </div>
+
             </div>
 
         </div>
-    </section>
 
-    <!-- Contact -->
-    <footer id="contact">
-        <h2>Let's Connect</h2>
-        <p>Open to Junior Flutter Developer opportunities, collaborations and exciting projects.</p>
-        <div class="social-links">
-            <a href="mailto:shakinulislam017@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/md-shakinul-islam-59032a279" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/shakinul-islam" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+
+    <!-- ==========================================
+         AI EXPENSE ANALYZER
+         ========================================== -->
+
+    <div id="modal-expense" class="project-screen">
+
+        <div class="screen-header">
+
+            <button class="back-btn"
+                    onclick="closeProject('modal-expense')">
+
+                <i class="fas fa-arrow-left"></i>
+                Back
+
+            </button>
+
+            <h2>AI Expense Analyzer</h2>
+
         </div>
-        <p class="copyright">© 2026 Md Shakinul Islam. Built with HTML, CSS & JavaScript.</p>
-    </footer>
+
+
+        <div class="screen-body">
+
+            <!-- Image Slider -->
+
+            <div class="slider-wrapper">
+
+                <button class="slide-arrow left-arrow"
+                        onclick="slidePrev(this)">
+
+                    <i class="fas fa-chevron-left"></i>
+
+                </button>
+
+                <div class="project-slider">
+
+                    <img src="expense_1.jpg"
+                         onerror="this.onerror=null; this.src='expense_1.png';"
+                         alt="AI Expense Analyzer Screenshot">
+
+                    <img src="expense_2.jpg"
+                         onerror="this.onerror=null; this.src='expense_2.png';"
+                         alt="AI Expense Analyzer Screenshot">
+
+                </div>
+
+                <button class="slide-arrow right-arrow"
+                        onclick="slideNext(this)">
+
+                    <i class="fas fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Details -->
+
+            <div class="screen-info">
+
+                <h3>AI Expense Analyzer — Smart Personal Finance</h3>
+
+                <p>
+                    AI Expense Analyzer is an AI-powered personal finance
+                    management application designed to simplify expense
+                    tracking, financial analysis and budget management.
+                </p>
+
+                <p>
+                    Its Smart AI Entry allows users to enter transactions
+                    naturally, such as "500 burger", while the AI identifies
+                    the transaction amount and category automatically.
+                </p>
+
+                <p>
+                    The application also provides an AI Financial Assistant
+                    that analyzes users' financial data and provides
+                    personalized spending insights and recommendations.
+                    Budget monitoring and real-time notifications help
+                    users stay aware of their spending limits.
+                </p>
+
+                <p>
+                    The backend is built with Node.js and Express.js,
+                    using MongoDB Atlas for data storage. Authentication
+                    is secured using JWT and bcrypt, while Groq models
+                    are integrated for AI-powered functionality.
+                </p>
+
+                <div class="tags">
+
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>MongoDB Atlas</span>
+                    <span>Groq API</span>
+                    <span>Llama 3.3 70B</span>
+                    <span>Llama 3.1 8B</span>
+                    <span>JWT</span>
+                    <span>Bcrypt</span>
+                    <span>REST API</span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <a href="https://github.com/shakinul-islam"
+                       target="_blank"
+                       class="btn primary">
+
+                        <i class="fab fa-github"></i>
+                        Source Code
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         DOKANER HISAB
+         ========================================== -->
+
+    <div id="modal-dokan" class="project-screen">
+
+        <div class="screen-header">
+
+            <button class="back-btn"
+                    onclick="closeProject('modal-dokan')">
+
+                <i class="fas fa-arrow-left"></i>
+                Back
+
+            </button>
+
+            <h2>Dokaner Hisab</h2>
+
+        </div>
+
+
+        <div class="screen-body">
+
+            <!-- Image Slider -->
+
+            <div class="slider-wrapper">
+
+                <button class="slide-arrow left-arrow"
+                        onclick="slidePrev(this)">
+
+                    <i class="fas fa-chevron-left"></i>
+
+                </button>
+
+                <div class="project-slider">
+
+                    <img src="dokan_1.jpg"
+                         onerror="this.onerror=null; this.src='dokan_1.png';"
+                         alt="Dokaner Hisab Screenshot">
+
+                    <img src="dokan_2.jpg"
+                         onerror="this.onerror=null; this.src='dokan_2.png';"
+                         alt="Dokaner Hisab Screenshot">
+
+                </div>
+
+                <button class="slide-arrow right-arrow"
+                        onclick="slideNext(this)">
+
+                    <i class="fas fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Details -->
+
+            <div class="screen-info">
+
+                <h3>Dokaner Hisab — Smart Grocery POS & Shop Management</h3>
+
+                <p>
+                    Dokaner Hisab is a smart Grocery POS and Shop Management
+                    application built with Flutter and Dart to simplify
+                    daily retail operations.
+                </p>
+
+                <p>
+                    The application provides POS billing with cart
+                    management, automatic stock deduction and support
+                    for multiple units such as Pcs, Kg and Liters.
+                    It also includes inventory management and purchase
+                    history.
+                </p>
+
+                <p>
+                    Business owners can manage customer dues through
+                    Due Khata, track expenses and monitor profit/loss,
+                    monthly costs and net revenue through interactive
+                    financial analytics and charts.
+                </p>
+
+                <p>
+                    Firebase Authentication and user-isolated Firestore
+                    Security Rules are used for secure data management.
+                    Cloudinary is integrated for shop logo/image uploads,
+                    while local notifications and offline Firestore
+                    persistence improve usability.
+                </p>
+
+                <div class="tags">
+
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Firebase Auth</span>
+                    <span>Cloud Firestore</span>
+                    <span>Firestore Security Rules</span>
+                    <span>Cloudinary</span>
+                    <span>fl_chart</span>
+                    <span>Local Notifications</span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <a href="https://github.com/shakinul-islam"
+                       target="_blank"
+                       class="btn primary">
+
+                        <i class="fab fa-github"></i>
+                        Source Code
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         CONTACTLESS DINING SAAS
+         ========================================== -->
+
+    <div id="modal-saas" class="project-screen">
+
+        <div class="screen-header">
+
+            <button class="back-btn"
+                    onclick="closeProject('modal-saas')">
+
+                <i class="fas fa-arrow-left"></i>
+                Back
+
+            </button>
+
+            <h2>Contactless Dining SaaS</h2>
+
+        </div>
+
+
+        <div class="screen-body">
+
+            <!-- Image Slider -->
+
+            <div class="slider-wrapper">
+
+                <button class="slide-arrow left-arrow"
+                        onclick="slidePrev(this)">
+
+                    <i class="fas fa-chevron-left"></i>
+
+                </button>
+
+                <div class="project-slider">
+
+                    <img src="saas_1.jpg"
+                         onerror="this.onerror=null; this.src='saas_1.png';"
+                         alt="Contactless Dining SaaS Screenshot">
+
+                    <img src="saas_2.jpg"
+                         onerror="this.onerror=null; this.src='saas_2.png';"
+                         alt="Contactless Dining SaaS Screenshot">
+
+                </div>
+
+                <button class="slide-arrow right-arrow"
+                        onclick="slideNext(this)">
+
+                    <i class="fas fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Details -->
+
+            <div class="screen-info">
+
+                <h3>Contactless Dining SaaS — Restaurant Management Platform</h3>
+
+                <p>
+                    Contactless Dining SaaS is a cloud-based restaurant
+                    management platform designed around a QR-based,
+                    zero-install customer ordering experience using a
+                    Progressive Web App (PWA).
+                </p>
+
+                <p>
+                    Customers can scan a QR code and place orders without
+                    installing an application. Orders are synchronized
+                    in real time between Customer, Waiter and Kitchen
+                    interfaces using Firebase Cloud Firestore.
+                </p>
+
+                <p>
+                    The responsive admin portal provides menu management,
+                    multi-image menu support, sales analytics and
+                    role-based access for Super Admin, Admin, Waiter
+                    and Kitchen users.
+                </p>
+
+                <p>
+                    OneSignal Web SDK is used for real-time browser
+                    notifications with Cloudflare proxy support.
+                    Cloudinary manages menu images, while GitGuardian
+                    is used for API security and secret-leak monitoring.
+                </p>
+
+                <p>
+                    The platform also supports bKash and Nagad payment
+                    tracking through Send Money, where customers submit
+                    their transaction ID for verification and tracking.
+                </p>
+
+                <div class="tags">
+
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Firebase Firestore</span>
+                    <span>PWA</span>
+                    <span>OneSignal</span>
+                    <span>Cloudflare</span>
+                    <span>Cloudinary</span>
+                    <span>GitGuardian</span>
+                    <span>bKash</span>
+                    <span>Nagad</span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <a href="https://github.com/shakinul-islam"
+                       target="_blank"
+                       class="btn primary">
+
+                        <i class="fab fa-github"></i>
+                        Source Code
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
     <script src="script.js"></script>
+
 </body>
 </html>
