@@ -181,7 +181,7 @@
                         <span>Dart</span>
                         <span>Java</span>
                         <span>Python</span>
-                        <span>JavaScript</span>
+                        <span>SQL</span>
                     </div>
                 </div>
 
@@ -866,7 +866,7 @@
                         <a href="elitetalk.apk"
                            download="EliteTalk.apk"
                            class="btn apk-btn optional-file-link"
-                           data-empty-message="No APK file is available for this project.">
+                           data-empty-message="Android APK is not available for this project yet.">
 
                             <i class="fab fa-android"></i>
                             Download APK
@@ -880,11 +880,9 @@
 
                         <p>Live App</p>
 
-                        <a href=""
-                           target="_blank"
-                           rel="noopener noreferrer"
+                        <a href="javascript:void(0)"
                            class="btn live-btn optional-live-link"
-                           data-empty-message="No live demo link is available for this project.">
+                           data-empty-message="Live demo is not available for this project yet.">
 
                             <i class="fas fa-globe"></i>
                             Live App
@@ -1039,7 +1037,7 @@
                         <a href="expense_analyzer.apk"
                            download="AI_Expense_Analyzer.apk"
                            class="btn apk-btn optional-file-link"
-                           data-empty-message="No APK file is available for this project.">
+                           data-empty-message="Android APK is not available for this project yet.">
 
                             <i class="fab fa-android"></i>
                             Download APK
@@ -1053,11 +1051,9 @@
 
                         <p>Live App</p>
 
-                        <a href=""
-                           target="_blank"
-                           rel="noopener noreferrer"
+                        <a href="javascript:void(0)"
                            class="btn live-btn optional-live-link"
-                           data-empty-message="No live demo link is available for this project.">
+                           data-empty-message="Live demo is not available for this project yet.">
 
                             <i class="fas fa-globe"></i>
                             Live App
@@ -1203,7 +1199,7 @@
                         <a href="dokaner_hisab.apk"
                            download="Dokaner_Hisab.apk"
                            class="btn apk-btn optional-file-link"
-                           data-empty-message="No APK file is available for this project.">
+                           data-empty-message="Android APK is not available for this project yet.">
 
                             <i class="fab fa-android"></i>
                             Download APK
@@ -1217,11 +1213,9 @@
 
                         <p>Live App</p>
 
-                        <a href=""
-                           target="_blank"
-                           rel="noopener noreferrer"
+                        <a href="javascript:void(0)"
                            class="btn live-btn optional-live-link"
-                           data-empty-message="No live demo link is available for this project.">
+                           data-empty-message="Live demo is not available for this project yet.">
 
                             <i class="fas fa-globe"></i>
                             Live App
@@ -1381,7 +1375,7 @@
                         <a href="contactless_saas.apk"
                            download="Contactless_Dining_SaaS.apk"
                            class="btn apk-btn optional-file-link"
-                           data-empty-message="No APK file is available for this project.">
+                           data-empty-message="Android APK is not available for this project yet.">
 
                             <i class="fab fa-android"></i>
                             Download APK
@@ -1395,11 +1389,9 @@
 
                         <p>Live App</p>
 
-                        <a href=""
-                           target="_blank"
-                           rel="noopener noreferrer"
+                        <a href="javascript:void(0)"
                            class="btn live-btn optional-live-link"
-                           data-empty-message="No live demo link is available for this project.">
+                           data-empty-message="Live demo is not available for this project yet.">
 
                             <i class="fas fa-globe"></i>
                             Live App
@@ -1429,6 +1421,169 @@
         <i class="fas fa-arrow-up"></i>
 
     </button>
+
+
+
+    <!-- ==================================================
+         OPTIONAL LINK HANDLER
+    =================================================== -->
+
+    <script>
+
+        /*
+         * Handle unavailable APK files and Live Demo links.
+         * Existing project functionality remains unchanged.
+         */
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // ==========================================
+            // LIVE DEMO LINKS
+            // ==========================================
+
+            document.querySelectorAll('.optional-live-link').forEach(function (link) {
+
+                link.addEventListener('click', function (event) {
+
+                    const href = link.getAttribute('href');
+
+                    // If no real link is provided
+                    if (
+                        !href ||
+                        href === '' ||
+                        href === '#' ||
+                        href === 'javascript:void(0)'
+                    ) {
+
+                        event.preventDefault();
+
+                        const message =
+                            link.getAttribute('data-empty-message') ||
+                            'Live demo is not available for this project yet.';
+
+                        if (typeof showToast === 'function') {
+
+                            showToast(message, 'error');
+
+                        } else {
+
+                            alert(message);
+
+                        }
+
+                    }
+
+                });
+
+            });
+
+
+            // ==========================================
+            // APK FILES
+            // ==========================================
+
+            document.querySelectorAll('.optional-file-link').forEach(function (link) {
+
+                link.addEventListener('click', function (event) {
+
+                    const filePath = link.getAttribute('href');
+
+                    if (!filePath || filePath === '#') {
+
+                        event.preventDefault();
+
+                        const message =
+                            link.getAttribute('data-empty-message') ||
+                            'Android APK is not available for this project yet.';
+
+                        if (typeof showToast === 'function') {
+
+                            showToast(message, 'error');
+
+                        } else {
+
+                            alert(message);
+
+                        }
+
+                        return;
+
+                    }
+
+
+                    /*
+                     * Check whether the APK file actually exists.
+                     * If the file is missing, prevent browser error/404.
+                     */
+
+                    event.preventDefault();
+
+                    fetch(filePath, {
+                        method: 'HEAD'
+                    })
+                    .then(function (response) {
+
+                        if (response.ok) {
+
+                            // File exists → continue normal download
+                            const downloadLink =
+                                document.createElement('a');
+
+                            downloadLink.href = filePath;
+
+                            downloadLink.download =
+                                link.getAttribute('download') || '';
+
+                            document.body.appendChild(downloadLink);
+
+                            downloadLink.click();
+
+                            document.body.removeChild(downloadLink);
+
+                        } else {
+
+                            const message =
+                                link.getAttribute('data-empty-message') ||
+                                'Android APK is not available for this project yet.';
+
+                            if (typeof showToast === 'function') {
+
+                                showToast(message, 'error');
+
+                            } else {
+
+                                alert(message);
+
+                            }
+
+                        }
+
+                    })
+                    .catch(function () {
+
+                        const message =
+                            link.getAttribute('data-empty-message') ||
+                            'Android APK is not available for this project yet.';
+
+                        if (typeof showToast === 'function') {
+
+                            showToast(message, 'error');
+
+                        } else {
+
+                            alert(message);
+
+                        }
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    </script>
 
 
 
