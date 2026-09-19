@@ -1,38 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Md Shakinul Islam - Flutter & Cross-Platform Mobile App Developer">
+
+    <meta name="description"
+        content="Md Shakinul Islam - Flutter & Cross-Platform Mobile App Developer specializing in Flutter, Dart, Firebase, AI and real-time applications.">
+
+    <meta name="keywords"
+        content="Md Shakinul Islam, Flutter Developer, Flutter Bangladesh, Dart Developer, Android Developer, Mobile App Developer">
+
+    <meta name="author" content="Md Shakinul Islam">
+
+    <meta property="og:title" content="Md Shakinul Islam | Flutter Developer">
+    <meta property="og:description"
+        content="Flutter & Cross-Platform Mobile App Developer building secure, scalable, real-time and AI-powered applications.">
+    <meta property="og:type" content="website">
+
     <title>Md Shakinul Islam | Flutter Developer</title>
+
+    <link rel="icon" type="image/png" href="profile.png">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- ==============================
+         SCROLL PROGRESS BAR
+    =============================== -->
+    <div class="scroll-progress"></div>
+
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
     <nav class="navbar">
-        <div class="logo">Shakinul<span>.</span></div>
+
+        <div class="logo">
+            Shakinul<span>.</span>
+        </div>
 
         <ul class="nav-links">
+
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+
         </ul>
 
         <div class="burger">
             <i class="fas fa-bars"></i>
         </div>
+
     </nav>
 
 
-    <!-- Main Portfolio Content -->
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
     <main id="main-content">
 
-        <!-- Hero -->
+
+        <!-- ==============================
+             HERO
+        =============================== -->
+
         <header id="home" class="hero">
 
             <div class="hero-content">
@@ -45,9 +86,15 @@
 
                     <h3>Flutter & Cross-Platform Mobile App Developer</h3>
 
+                    <div class="availability-badge">
+                        <span class="status-dot"></span>
+                        Open to Junior Flutter Developer Opportunities
+                    </div>
+
                     <p class="hero-description">
                         I build secure, scalable, real-time and AI-powered
-                        mobile applications using Flutter, Dart, Firebase and modern APIs.
+                        mobile applications using Flutter, Dart, Firebase
+                        and modern APIs.
                     </p>
 
                     <div class="cta-buttons">
@@ -56,20 +103,36 @@
                             View My Work
                         </a>
 
+                        <a href="javascript:void(0)"
+                           onclick="openProject('modal-resume')"
+                           class="btn secondary">
+
+                            <i class="fas fa-file-alt"></i>
+                            Resume
+
+                        </a>
+
                         <a href="https://github.com/shakinul-islam"
                            target="_blank"
+                           rel="noopener noreferrer"
                            class="btn secondary">
-                            <i class="fab fa-github"></i> GitHub
+
+                            <i class="fab fa-github"></i>
+                            GitHub
+
                         </a>
 
                     </div>
 
                 </div>
 
+
                 <div class="hero-image">
+
                     <img src="profile.jpg"
                          onerror="this.onerror=null; this.src='profile.png';"
                          alt="Md Shakinul Islam">
+
                 </div>
 
             </div>
@@ -77,7 +140,11 @@
         </header>
 
 
-        <!-- About -->
+
+        <!-- ==============================
+             ABOUT
+        =============================== -->
+
         <section id="about" class="about">
 
             <h2 class="section-title">About Me</h2>
@@ -93,41 +160,106 @@
         </section>
 
 
-        <!-- Skills -->
+
+        <!-- ==============================
+             SKILLS
+        =============================== -->
+
         <section id="skills" class="skills">
 
             <h2 class="section-title">Technical Skills</h2>
 
-            <div class="skills-grid">
+            <div class="skill-category-grid">
 
-                <div class="skill-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Flutter & Dart</h4>
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-code"></i>
+                        Languages
+                    </h3>
+
+                    <div class="skill-tags">
+                        <span>Dart</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fab fa-android"></i>
-                    <h4>Java & Android</h4>
+
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile Development
+                    </h3>
+
+                    <div class="skill-tags">
+                        <span>Flutter</span>
+                        <span>Android</span>
+                        <span>Material UI</span>
+                        <span>Responsive UI</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fas fa-fire"></i>
-                    <h4>Firebase</h4>
+
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-server"></i>
+                        Backend & Database
+                    </h3>
+
+                    <div class="skill-tags">
+                        <span>Firebase</span>
+                        <span>Firestore</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>MongoDB</span>
+                        <span>REST API</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fas fa-robot"></i>
-                    <h4>AI Integration</h4>
+
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-robot"></i>
+                        AI Integration
+                    </h3>
+
+                    <div class="skill-tags">
+                        <span>Groq API</span>
+                        <span>LLM Integration</span>
+                        <span>Prompt Engineering</span>
+                        <span>AI Features</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fas fa-comments"></i>
-                    <h4>Real-Time Apps</h4>
+
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-comments"></i>
+                        Real-Time Applications
+                    </h3>
+
+                    <div class="skill-tags">
+                        <span>Real-Time Messaging</span>
+                        <span>Push Notifications</span>
+                        <span>Audio/Video Communication</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
-                    <h4>Git & GitHub</h4>
+
+                <div class="skill-category">
+                    <h3>
+                        <i class="fab fa-git-alt"></i>
+                        Tools & Platforms
+                    </h3>
+
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>Android Studio</span>
+                        <span>Cloudinary</span>
+                    </div>
                 </div>
 
             </div>
@@ -135,7 +267,147 @@
         </section>
 
 
-        <!-- Projects Grid -->
+
+        <!-- ==============================
+             EXPERIENCE
+        =============================== -->
+
+        <section id="experience" class="experience">
+
+            <h2 class="section-title">Experience & Training</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-date">
+                            3-Month Industrial Training
+                        </span>
+
+                        <h3>Flutter Developer Trainee</h3>
+
+                        <h4>AppStick IT Firm</h4>
+
+                        <p>
+                            Completed a 3-month industrial training focused
+                            on Flutter and Dart development, Firebase,
+                            REST API integration, UI/UX implementation,
+                            state management and real-world mobile
+                            application development.
+                        </p>
+
+                        <div class="timeline-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                            <span>REST API</span>
+                            <span>UI/UX</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-date">
+                            Industrial Training Project
+                        </span>
+
+                        <h3>EliteTalk — Real-Time Communication App</h3>
+
+                        <h4>Flutter / Firebase / AI Integration</h4>
+
+                        <p>
+                            Developed a full-stack cross-platform
+                            communication application with real-time
+                            messaging, multimedia sharing, notifications,
+                            AI assistant and audio/video communication.
+                        </p>
+
+                        <div class="timeline-tags">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Cloudinary</span>
+                            <span>Groq API</span>
+                            <span>Real-Time</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             EDUCATION
+        =============================== -->
+
+        <section id="education" class="education">
+
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div class="education-content">
+
+                    <span class="education-label">
+                        Bachelor's Degree
+                    </span>
+
+                    <h3>
+                        Bachelor of Science in Computer Science & Engineering
+                    </h3>
+
+                    <p>Computer Science & Engineering</p>
+
+                    <div class="education-details">
+
+                        <span>
+                            <i class="fas fa-star"></i>
+                            CGPA: 3.66 / 4.00
+                        </span>
+
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            2022 – 2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             PROJECTS
+        =============================== -->
+
         <section id="projects" class="projects">
 
             <h2 class="section-title">Featured Projects</h2>
@@ -143,17 +415,17 @@
             <div class="project-grid">
 
 
-                <!-- ==============================
-                     PROJECT 1: ELITETALK
-                     ============================== -->
+                <!-- PROJECT 1 -->
 
                 <div class="project-card"
                      onclick="openProject('modal-elitetalk')">
 
                     <div class="card-logo">
+
                         <img src="logo_elitetalk.jpg"
-                             onerror="this.style.display='none'"
+                             onerror="this.onerror=null; this.src='logo_elitetalk.png';"
                              alt="EliteTalk Logo">
+
                     </div>
 
                     <div class="card-content">
@@ -176,17 +448,18 @@
                 </div>
 
 
-                <!-- ==============================
-                     PROJECT 2: AI EXPENSE ANALYZER
-                     ============================== -->
+
+                <!-- PROJECT 2 -->
 
                 <div class="project-card"
                      onclick="openProject('modal-expense')">
 
                     <div class="card-logo">
+
                         <img src="logo_expense.png"
-                             onerror="this.style.display='none'"
+                             onerror="this.onerror=null; this.src='logo_expense.jpg';"
                              alt="AI Expense Analyzer Logo">
+
                     </div>
 
                     <div class="card-content">
@@ -195,8 +468,8 @@
 
                         <p>
                             AI-powered personal finance app with smart
-                            expense entry, financial insights,
-                            budget monitoring and AI recommendations.
+                            expense entry, financial insights, budget
+                            monitoring and AI recommendations.
                         </p>
 
                         <span class="click-hint">
@@ -209,17 +482,18 @@
                 </div>
 
 
-                <!-- ==============================
-                     PROJECT 3: DOKANER HISAB
-                     ============================== -->
+
+                <!-- PROJECT 3 -->
 
                 <div class="project-card"
                      onclick="openProject('modal-dokan')">
 
                     <div class="card-logo">
+
                         <img src="logo_dokan.png"
-                             onerror="this.style.display='none'"
+                             onerror="this.onerror=null; this.src='logo_dokan.jpg';"
                              alt="Dokaner Hisab Logo">
+
                     </div>
 
                     <div class="card-content">
@@ -242,17 +516,18 @@
                 </div>
 
 
-                <!-- ==============================
-                     PROJECT 4: CONTACTLESS DINING
-                     ============================== -->
+
+                <!-- PROJECT 4 -->
 
                 <div class="project-card"
                      onclick="openProject('modal-saas')">
 
                     <div class="card-logo">
+
                         <img src="logo_saas.png"
-                             onerror="this.style.display='none'"
+                             onerror="this.onerror=null; this.src='logo_saas.jpg';"
                              alt="Contactless Dining SaaS Logo">
+
                     </div>
 
                     <div class="card-content">
@@ -279,7 +554,86 @@
         </section>
 
 
-        <!-- Contact -->
+
+        <!-- ==============================
+             CONTACT FORM
+        =============================== -->
+
+        <section id="contact-form-section"
+                 class="contact-section">
+
+            <h2 class="section-title">Get In Touch</h2>
+
+            <p class="contact-subtitle">
+                Have a project in mind or want to hire me?
+                Send me a message!
+            </p>
+
+            <div class="contact-container">
+
+                <form action="https://formspree.io/f/mrpbbnpv"
+                      method="POST"
+                      class="contact-form">
+
+                    <div class="input-group">
+
+                        <label for="name">Your Name</label>
+
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="John Snow"
+                               required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="email">Your Email</label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="johnsnow@example.com"
+                               required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="message">Your Message</label>
+
+                        <textarea id="message"
+                                  name="message"
+                                  rows="5"
+                                  placeholder="Write your message here..."
+                                  required></textarea>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn primary submit-btn">
+
+                        Send Message
+                        <i class="fas fa-paper-plane"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             FOOTER
+        =============================== -->
+
         <footer id="contact">
 
             <h2>Let's Connect</h2>
@@ -290,47 +644,113 @@
 
             <div class="social-links">
 
-                <a href="mailto:shakinulislam017@gmail.com">
+                <a href="mailto:shakinulislam017@gmail.com"
+                   aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
 
                 <a href="https://www.linkedin.com/in/md-shakinul-islam-59032a279"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
 
                 <a href="https://github.com/shakinul-islam"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub">
                     <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://wa.me/8801775199186"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
                 </a>
 
             </div>
 
             <p class="copyright">
-                © 2026 Md Shakinul Islam.
+                © 2026 Md Shakinul Islam. All Rights Reserved.
             </p>
 
         </footer>
 
+
     </main>
 
 
-    <!-- ==========================================
-         PROJECT DETAILS SCREENS
-         ========================================== -->
+
+    <!-- ==================================================
+         RESUME SCREEN
+    =================================================== -->
+
+    <div id="modal-resume"
+         class="project-screen">
+
+        <div class="screen-header">
+
+            <button class="back-btn"
+                    onclick="closeProject('modal-resume')">
+
+                <i class="fas fa-arrow-left"></i>
+                Back
+
+            </button>
+
+            <h2>My Resume</h2>
+
+            <!-- Modern Download Resume Button -->
+            <a href="resume.pdf"
+               download="Md_Shakinul_Islam_Resume.pdf"
+               class="btn primary resume-download-btn"
+               style="margin-left:auto; margin-right:0; white-space:nowrap; display:flex; align-items:center; gap:0.5rem; padding:0.65rem 1.2rem; font-size:0.9rem;">
+
+                <i class="fas fa-download"></i>
+                Download Resume
+
+            </a>
+
+        </div>
 
 
-    <!-- ==========================================
+        <div class="screen-body resume-body">
+
+            <div class="resume-viewer">
+
+                <iframe src="resume.pdf"
+                        title="Md Shakinul Islam Resume">
+
+                    This browser does not support PDFs natively.
+                    Please download the PDF to view it.
+
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
          ELITETALK
-         ========================================== -->
+    =================================================== -->
 
-    <div id="modal-elitetalk" class="project-screen">
+    <div id="modal-elitetalk"
+         class="project-screen">
 
         <div class="screen-header">
 
             <button class="back-btn"
                     onclick="closeProject('modal-elitetalk')">
-                <i class="fas fa-arrow-left"></i> Back
+
+                <i class="fas fa-arrow-left"></i>
+                Back
+
             </button>
 
             <h2>EliteTalk Details</h2>
@@ -340,14 +760,16 @@
 
         <div class="screen-body">
 
-            <!-- Image Slider -->
-
             <div class="slider-wrapper">
 
                 <button class="slide-arrow left-arrow"
-                        onclick="slidePrev(this)">
+                        onclick="slidePrev(this)"
+                        aria-label="Previous image">
+
                     <i class="fas fa-chevron-left"></i>
+
                 </button>
+
 
                 <div class="project-slider">
 
@@ -361,15 +783,17 @@
 
                 </div>
 
+
                 <button class="slide-arrow right-arrow"
-                        onclick="slideNext(this)">
+                        onclick="slideNext(this)"
+                        aria-label="Next image">
+
                     <i class="fas fa-chevron-right"></i>
+
                 </button>
 
             </div>
 
-
-            <!-- Details -->
 
             <div class="screen-info">
 
@@ -383,23 +807,33 @@
                     multimedia sharing and AI-powered interaction.
                 </p>
 
-                <p>
-                    It supports real-time messaging with Sent, Delivered
-                    and Seen status, typing indicators, secure message
-                    requests and access control. Users can share images,
-                    videos and documents through Cloudinary.
-                </p>
+                <h4 class="detail-heading">Key Features</h4>
+
+                <ul class="feature-list">
+
+                    <li><i class="fas fa-check"></i>Real-time messaging with Sent, Delivered and Seen status</li>
+                    <li><i class="fas fa-check"></i>Typing indicators and message requests</li>
+                    <li><i class="fas fa-check"></i>Secure access control</li>
+                    <li><i class="fas fa-check"></i>Image, video and document sharing</li>
+                    <li><i class="fas fa-check"></i>English & Bengali AI Assistant</li>
+                    <li><i class="fas fa-check"></i>Push notifications</li>
+                    <li><i class="fas fa-check"></i>Audio / Video communication</li>
+                    <li><i class="fas fa-check"></i>Reply, reactions and message deletion</li>
+
+                </ul>
+
+                <h4 class="detail-heading">My Role</h4>
 
                 <p>
-                    The application also includes an AI Chat Assistant
-                    powered by Groq API and Llama 3.3 70B with support
-                    for both English and Bengali. Additional features
-                    include swipe-to-reply, emoji reactions, message
-                    deletion and real-time notifications.
+                    Worked on Flutter application development,
+                    Firebase integration, real-time communication,
+                    media integration, AI assistant integration and
+                    user interaction features.
                 </p>
+
+                <h4 class="detail-heading">Technologies</h4>
 
                 <div class="tags">
-
                     <span>Flutter</span>
                     <span>Dart</span>
                     <span>Firebase</span>
@@ -408,19 +842,56 @@
                     <span>Groq API</span>
                     <span>Llama 3.3 70B</span>
                     <span>OneSignal</span>
-
+                    <span>ZegoCloud</span>
                 </div>
+
 
                 <div class="project-links">
 
-                    <a href="https://github.com/shakinul-islam"
+                    <a href="https://github.com/shakinul-islam/My-Chatting-App.git"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="btn primary">
 
                         <i class="fab fa-github"></i>
-                        Github Repository Link
+                        GitHub
 
                     </a>
+
+
+                    <div class="apk-box optional-link-box">
+
+                        <p>Android APK</p>
+
+                        <a href="elitetalk.apk"
+                           download="EliteTalk.apk"
+                           class="btn apk-btn optional-file-link"
+                           data-empty-message="No APK file is available for this project.">
+
+                            <i class="fab fa-android"></i>
+                            Download APK
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="live-link-box optional-link-box">
+
+                        <p>Live App</p>
+
+                        <a href=""
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn live-btn optional-live-link"
+                           data-empty-message="No live demo link is available for this project.">
+
+                            <i class="fas fa-globe"></i>
+                            Live App
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -431,11 +902,13 @@
     </div>
 
 
-    <!-- ==========================================
-         AI EXPENSE ANALYZER
-         ========================================== -->
 
-    <div id="modal-expense" class="project-screen">
+    <!-- ==================================================
+         AI EXPENSE ANALYZER
+    =================================================== -->
+
+    <div id="modal-expense"
+         class="project-screen">
 
         <div class="screen-header">
 
@@ -454,16 +927,16 @@
 
         <div class="screen-body">
 
-            <!-- Image Slider -->
-
             <div class="slider-wrapper">
 
                 <button class="slide-arrow left-arrow"
-                        onclick="slidePrev(this)">
+                        onclick="slidePrev(this)"
+                        aria-label="Previous image">
 
                     <i class="fas fa-chevron-left"></i>
 
                 </button>
+
 
                 <div class="project-slider">
 
@@ -477,8 +950,10 @@
 
                 </div>
 
+
                 <button class="slide-arrow right-arrow"
-                        onclick="slideNext(this)">
+                        onclick="slideNext(this)"
+                        aria-label="Next image">
 
                     <i class="fas fa-chevron-right"></i>
 
@@ -486,8 +961,6 @@
 
             </div>
 
-
-            <!-- Details -->
 
             <div class="screen-info">
 
@@ -499,29 +972,39 @@
                     tracking, financial analysis and budget management.
                 </p>
 
-                <p>
-                    Its Smart AI Entry allows users to enter transactions
-                    naturally, such as "500 burger", while the AI identifies
-                    the transaction amount and category automatically.
-                </p>
+                <h4 class="detail-heading">Key Features</h4>
+
+                <ul class="feature-list">
+
+                    <li><i class="fas fa-check"></i>Smart AI Entry for natural language expenses</li>
+                    <li><i class="fas fa-check"></i>Automatic amount and category detection</li>
+                    <li><i class="fas fa-check"></i>AI Financial Assistant</li>
+                    <li><i class="fas fa-check"></i>Financial insights and recommendations</li>
+                    <li><i class="fas fa-check"></i>Budget monitoring</li>
+                    <li><i class="fas fa-check"></i>Real-time notifications</li>
+                    <li><i class="fas fa-check"></i>Secure authentication</li>
+
+                </ul>
+
+                <h4 class="detail-heading">My Role</h4>
 
                 <p>
-                    The application also provides an AI Financial Assistant
-                    that analyzes users' financial data and provides
-                    personalized spending insights and recommendations.
-                    Budget monitoring and real-time notifications help
-                    users stay aware of their spending limits.
+                    Worked on AI integration, Groq API integration,
+                    prompt engineering, Smart AI Entry and AI-powered
+                    financial assistant functionality.
                 </p>
 
+                <h4 class="detail-heading">Backend</h4>
+
                 <p>
-                    The backend is built with Node.js and Express.js,
-                    using MongoDB Atlas for data storage. Authentication
-                    is secured using JWT and bcrypt, while Groq models
-                    are integrated for AI-powered functionality.
+                    Node.js and Express.js backend with MongoDB Atlas
+                    for data storage. JWT and bcrypt are used for
+                    authentication and security.
                 </p>
+
+                <h4 class="detail-heading">Technologies</h4>
 
                 <div class="tags">
-
                     <span>Flutter</span>
                     <span>Dart</span>
                     <span>Node.js</span>
@@ -533,19 +1016,55 @@
                     <span>JWT</span>
                     <span>Bcrypt</span>
                     <span>REST API</span>
-
                 </div>
+
 
                 <div class="project-links">
 
-                    <a href="https://github.com/shakinul-islam"
+                    <a href="https://github.com/shakinul-islam/AI-Expense-Analyzer.git"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="btn primary">
 
                         <i class="fab fa-github"></i>
-                        Source Code
+                        GitHub
 
                     </a>
+
+
+                    <div class="apk-box optional-link-box">
+
+                        <p>Android APK</p>
+
+                        <a href="expense_analyzer.apk"
+                           download="AI_Expense_Analyzer.apk"
+                           class="btn apk-btn optional-file-link"
+                           data-empty-message="No APK file is available for this project.">
+
+                            <i class="fab fa-android"></i>
+                            Download APK
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="live-link-box optional-link-box">
+
+                        <p>Live App</p>
+
+                        <a href=""
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn live-btn optional-live-link"
+                           data-empty-message="No live demo link is available for this project.">
+
+                            <i class="fas fa-globe"></i>
+                            Live App
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -556,11 +1075,13 @@
     </div>
 
 
-    <!-- ==========================================
-         DOKANER HISAB
-         ========================================== -->
 
-    <div id="modal-dokan" class="project-screen">
+    <!-- ==================================================
+         DOKANER HISAB
+    =================================================== -->
+
+    <div id="modal-dokan"
+         class="project-screen">
 
         <div class="screen-header">
 
@@ -579,16 +1100,16 @@
 
         <div class="screen-body">
 
-            <!-- Image Slider -->
-
             <div class="slider-wrapper">
 
                 <button class="slide-arrow left-arrow"
-                        onclick="slidePrev(this)">
+                        onclick="slidePrev(this)"
+                        aria-label="Previous image">
 
                     <i class="fas fa-chevron-left"></i>
 
                 </button>
+
 
                 <div class="project-slider">
 
@@ -602,8 +1123,10 @@
 
                 </div>
 
+
                 <button class="slide-arrow right-arrow"
-                        onclick="slideNext(this)">
+                        onclick="slideNext(this)"
+                        aria-label="Next image">
 
                     <i class="fas fa-chevron-right"></i>
 
@@ -612,43 +1135,43 @@
             </div>
 
 
-            <!-- Details -->
-
             <div class="screen-info">
 
                 <h3>Dokaner Hisab — Smart Grocery POS & Shop Management</h3>
 
                 <p>
-                    Dokaner Hisab is a smart Grocery POS and Shop Management
-                    application built with Flutter and Dart to simplify
-                    daily retail operations.
+                    Dokaner Hisab is a smart Grocery POS and Shop
+                    Management application built with Flutter and Dart
+                    to simplify daily retail operations.
                 </p>
 
-                <p>
-                    The application provides POS billing with cart
-                    management, automatic stock deduction and support
-                    for multiple units such as Pcs, Kg and Liters.
-                    It also includes inventory management and purchase
-                    history.
-                </p>
+                <h4 class="detail-heading">Key Features</h4>
+
+                <ul class="feature-list">
+
+                    <li><i class="fas fa-check"></i>POS billing and cart management</li>
+                    <li><i class="fas fa-check"></i>Automatic stock deduction</li>
+                    <li><i class="fas fa-check"></i>Pcs, Kg and Liters unit support</li>
+                    <li><i class="fas fa-check"></i>Inventory and purchase history</li>
+                    <li><i class="fas fa-check"></i>Customer Due Khata</li>
+                    <li><i class="fas fa-check"></i>Expense management</li>
+                    <li><i class="fas fa-check"></i>Profit / Loss analytics</li>
+                    <li><i class="fas fa-check"></i>Offline Firestore persistence</li>
+
+                </ul>
+
+                <h4 class="detail-heading">My Role</h4>
 
                 <p>
-                    Business owners can manage customer dues through
-                    Due Khata, track expenses and monitor profit/loss,
-                    monthly costs and net revenue through interactive
-                    financial analytics and charts.
+                    Developed Flutter UI and application features,
+                    Firebase authentication and database integration,
+                    inventory logic, billing flow, analytics and
+                    notification functionality.
                 </p>
 
-                <p>
-                    Firebase Authentication and user-isolated Firestore
-                    Security Rules are used for secure data management.
-                    Cloudinary is integrated for shop logo/image uploads,
-                    while local notifications and offline Firestore
-                    persistence improve usability.
-                </p>
+                <h4 class="detail-heading">Technologies</h4>
 
                 <div class="tags">
-
                     <span>Flutter</span>
                     <span>Dart</span>
                     <span>Firebase Auth</span>
@@ -657,19 +1180,55 @@
                     <span>Cloudinary</span>
                     <span>fl_chart</span>
                     <span>Local Notifications</span>
-
                 </div>
+
 
                 <div class="project-links">
 
-                    <a href="https://github.com/shakinul-islam"
+                    <a href="https://github.com/shakinul-islam/Grocery-App.git"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="btn primary">
 
                         <i class="fab fa-github"></i>
-                        Source Code
+                        GitHub
 
                     </a>
+
+
+                    <div class="apk-box optional-link-box">
+
+                        <p>Android APK</p>
+
+                        <a href="dokaner_hisab.apk"
+                           download="Dokaner_Hisab.apk"
+                           class="btn apk-btn optional-file-link"
+                           data-empty-message="No APK file is available for this project.">
+
+                            <i class="fab fa-android"></i>
+                            Download APK
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="live-link-box optional-link-box">
+
+                        <p>Live App</p>
+
+                        <a href=""
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn live-btn optional-live-link"
+                           data-empty-message="No live demo link is available for this project.">
+
+                            <i class="fas fa-globe"></i>
+                            Live App
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -680,11 +1239,13 @@
     </div>
 
 
-    <!-- ==========================================
-         CONTACTLESS DINING SAAS
-         ========================================== -->
 
-    <div id="modal-saas" class="project-screen">
+    <!-- ==================================================
+         CONTACTLESS DINING SAAS
+    =================================================== -->
+
+    <div id="modal-saas"
+         class="project-screen">
 
         <div class="screen-header">
 
@@ -703,16 +1264,16 @@
 
         <div class="screen-body">
 
-            <!-- Image Slider -->
-
             <div class="slider-wrapper">
 
                 <button class="slide-arrow left-arrow"
-                        onclick="slidePrev(this)">
+                        onclick="slidePrev(this)"
+                        aria-label="Previous image">
 
                     <i class="fas fa-chevron-left"></i>
 
                 </button>
+
 
                 <div class="project-slider">
 
@@ -726,8 +1287,10 @@
 
                 </div>
 
+
                 <button class="slide-arrow right-arrow"
-                        onclick="slideNext(this)">
+                        onclick="slideNext(this)"
+                        aria-label="Next image">
 
                     <i class="fas fa-chevron-right"></i>
 
@@ -736,48 +1299,55 @@
             </div>
 
 
-            <!-- Details -->
-
             <div class="screen-info">
 
-                <h3>Contactless Dining SaaS — Restaurant Management Platform</h3>
+                <h3>
+                    Contactless Dining SaaS — Restaurant Management Platform
+                </h3>
 
                 <p>
                     Contactless Dining SaaS is a cloud-based restaurant
                     management platform designed around a QR-based,
-                    zero-install customer ordering experience using a
-                    Progressive Web App (PWA).
+                    zero-install customer ordering experience using
+                    a Progressive Web App (PWA).
                 </p>
 
-                <p>
-                    Customers can scan a QR code and place orders without
-                    installing an application. Orders are synchronized
-                    in real time between Customer, Waiter and Kitchen
-                    interfaces using Firebase Cloud Firestore.
-                </p>
+                <h4 class="detail-heading">Key Features</h4>
+
+                <ul class="feature-list">
+
+                    <li><i class="fas fa-check"></i>QR-based customer ordering</li>
+                    <li><i class="fas fa-check"></i>Zero-install PWA experience</li>
+                    <li><i class="fas fa-check"></i>Real-time order synchronization</li>
+                    <li><i class="fas fa-check"></i>Customer / Waiter / Kitchen workflow</li>
+                    <li><i class="fas fa-check"></i>Menu management</li>
+                    <li><i class="fas fa-check"></i>Sales analytics</li>
+                    <li><i class="fas fa-check"></i>Role-based access control</li>
+                    <li><i class="fas fa-check"></i>Browser push notifications</li>
+
+                </ul>
+
+                <h4 class="detail-heading">My Role</h4>
 
                 <p>
-                    The responsive admin portal provides menu management,
-                    multi-image menu support, sales analytics and
-                    role-based access for Super Admin, Admin, Waiter
-                    and Kitchen users.
+                    Worked on Flutter-based application development,
+                    Firebase Firestore real-time order management,
+                    responsive interfaces, notifications, cloud
+                    integrations and platform functionality.
                 </p>
 
-                <p>
-                    OneSignal Web SDK is used for real-time browser
-                    notifications with Cloudflare proxy support.
-                    Cloudinary manages menu images, while GitGuardian
-                    is used for API security and secret-leak monitoring.
-                </p>
+                <h4 class="detail-heading">Payment System</h4>
 
                 <p>
-                    The platform also supports bKash and Nagad payment
-                    tracking through Send Money, where customers submit
-                    their transaction ID for verification and tracking.
+                    The platform supports bKash and Nagad payment
+                    tracking through Send Money, where customers
+                    submit their transaction ID for verification
+                    and tracking.
                 </p>
+
+                <h4 class="detail-heading">Technologies</h4>
 
                 <div class="tags">
-
                     <span>Flutter</span>
                     <span>Dart</span>
                     <span>Firebase Firestore</span>
@@ -788,19 +1358,55 @@
                     <span>GitGuardian</span>
                     <span>bKash</span>
                     <span>Nagad</span>
-
                 </div>
+
 
                 <div class="project-links">
 
-                    <a href="https://github.com/shakinul-islam"
+                    <a href="https://github.com/shakinul-islam/smart_restuarant.git"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="btn primary">
 
                         <i class="fab fa-github"></i>
-                        Source Code
+                        GitHub
 
                     </a>
+
+
+                    <div class="apk-box optional-link-box">
+
+                        <p>Android APK</p>
+
+                        <a href="contactless_saas.apk"
+                           download="Contactless_Dining_SaaS.apk"
+                           class="btn apk-btn optional-file-link"
+                           data-empty-message="No APK file is available for this project.">
+
+                            <i class="fab fa-android"></i>
+                            Download APK
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="live-link-box optional-link-box">
+
+                        <p>Live App</p>
+
+                        <a href=""
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn live-btn optional-live-link"
+                           data-empty-message="No live demo link is available for this project.">
+
+                            <i class="fas fa-globe"></i>
+                            Live App
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -811,7 +1417,23 @@
     </div>
 
 
+
+    <!-- ==============================
+         BACK TO TOP
+    =============================== -->
+
+    <button id="backToTop"
+            class="back-to-top"
+            aria-label="Back to top">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
