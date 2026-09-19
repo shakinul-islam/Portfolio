@@ -17,8 +17,6 @@ if (burger && navLinks) {
 }
 
 
-// Close mobile menu when clicking a navigation link
-
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
 
@@ -42,10 +40,8 @@ function openProject(screenId) {
 
         screen.classList.add('active');
 
-        // Prevent background page scrolling
         document.body.style.overflow = 'hidden';
 
-        // Start slider from first image
         const slider = screen.querySelector('.project-slider');
 
         if (slider) {
@@ -55,7 +51,6 @@ function openProject(screenId) {
             });
         }
 
-        // Update browser history
         history.pushState(
             { project: screenId },
             '',
@@ -77,17 +72,18 @@ function closeProject(screenId) {
 
         screen.classList.remove('active');
 
-        // Restore page scrolling
         document.body.style.overflow = 'auto';
 
-        // Remove project hash
         if (window.location.hash === '#' + screenId) {
+
             history.pushState(
                 '',
                 document.title,
                 window.location.pathname + window.location.search
             );
+
         }
+
     }
 }
 
@@ -100,7 +96,8 @@ document.addEventListener('keydown', (event) => {
 
     if (event.key === 'Escape') {
 
-        const activeScreen = document.querySelector('.project-screen.active');
+        const activeScreen =
+            document.querySelector('.project-screen.active');
 
         if (activeScreen) {
 
@@ -109,13 +106,17 @@ document.addEventListener('keydown', (event) => {
             document.body.style.overflow = 'auto';
 
             if (window.location.hash) {
+
                 history.pushState(
                     '',
                     document.title,
                     window.location.pathname + window.location.search
                 );
+
             }
+
         }
+
     }
 
 });
@@ -171,34 +172,40 @@ function slideNext(btn) {
 
 function createSliderDots() {
 
-    const sliders = document.querySelectorAll('.project-slider');
+    const sliders =
+        document.querySelectorAll('.project-slider');
 
     sliders.forEach((slider) => {
 
-        const images = slider.querySelectorAll('img');
+        const images =
+            slider.querySelectorAll('img');
 
         if (images.length <= 1) {
             return;
         }
 
-        const wrapper = slider.parentElement;
+        const wrapper =
+            slider.parentElement;
 
         if (!wrapper) return;
 
-        // Don't create duplicate dots
         if (wrapper.querySelector('.slider-dots')) {
             return;
         }
 
-        const dotsContainer = document.createElement('div');
+        const dotsContainer =
+            document.createElement('div');
 
-        dotsContainer.className = 'slider-dots';
+        dotsContainer.className =
+            'slider-dots';
 
         images.forEach((image, index) => {
 
-            const dot = document.createElement('button');
+            const dot =
+                document.createElement('button');
 
-            dot.className = 'slider-dot';
+            dot.className =
+                'slider-dot';
 
             if (index === 0) {
                 dot.classList.add('active');
@@ -212,8 +219,12 @@ function createSliderDots() {
             dot.addEventListener('click', () => {
 
                 slider.scrollTo({
-                    left: slider.clientWidth * index,
+
+                    left:
+                        slider.clientWidth * index,
+
                     behavior: 'smooth'
+
                 });
 
             });
@@ -235,7 +246,8 @@ function createSliderDots() {
 
 function updateSliderDots() {
 
-    const sliders = document.querySelectorAll('.project-slider');
+    const sliders =
+        document.querySelectorAll('.project-slider');
 
     sliders.forEach((slider) => {
 
@@ -250,7 +262,10 @@ function updateSliderDots() {
         if (!dots.length) return;
 
         const currentIndex =
-            Math.round(slider.scrollLeft / slider.clientWidth);
+            Math.round(
+                slider.scrollLeft /
+                slider.clientWidth
+            );
 
         dots.forEach((dot, index) => {
 
@@ -266,8 +281,6 @@ function updateSliderDots() {
 }
 
 
-// Listen to slider scrolling
-
 document.querySelectorAll('.project-slider').forEach((slider) => {
 
     slider.addEventListener(
@@ -278,8 +291,6 @@ document.querySelectorAll('.project-slider').forEach((slider) => {
 
 });
 
-
-// Create dots after page loads
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -293,15 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // ======================================================
 // 9. PROJECT FILTER
 // ======================================================
-//
-// Works if your HTML contains:
-//
-// .filter-btn
-// .project-card
-//
-// Example:
-// data-category="flutter ai firebase"
-//
 
 const filterButtons =
     document.querySelectorAll('.filter-btn');
@@ -309,19 +311,18 @@ const filterButtons =
 const projectCards =
     document.querySelectorAll('.project-card');
 
-if (filterButtons.length > 0 && projectCards.length > 0) {
+if (
+    filterButtons.length > 0 &&
+    projectCards.length > 0
+) {
 
     filterButtons.forEach(button => {
 
         button.addEventListener('click', () => {
 
-            // Remove active from all buttons
-
             filterButtons.forEach(btn => {
                 btn.classList.remove('active');
             });
-
-            // Add active to selected button
 
             button.classList.add('active');
 
@@ -361,9 +362,10 @@ if (filterButtons.length > 0 && projectCards.length > 0) {
 // 10. SCROLL REVEAL ANIMATION
 // ======================================================
 
-const revealElements = document.querySelectorAll(
-    '.section-title, .about, .skill-card, .project-card, .contact-container'
-);
+const revealElements =
+    document.querySelectorAll(
+        '.section-title, .about, .skill-card, .project-card, .contact-container'
+    );
 
 if (revealElements.length > 0) {
 
@@ -375,7 +377,9 @@ if (revealElements.length > 0) {
 
                     if (entry.isIntersecting) {
 
-                        entry.target.classList.add('reveal-visible');
+                        entry.target.classList.add(
+                            'reveal-visible'
+                        );
 
                         revealObserver.unobserve(
                             entry.target
@@ -393,7 +397,9 @@ if (revealElements.length > 0) {
 
     revealElements.forEach(element => {
 
-        element.classList.add('reveal-element');
+        element.classList.add(
+            'reveal-element'
+        );
 
         revealObserver.observe(element);
 
@@ -472,15 +478,13 @@ if (
 let backToTop =
     document.querySelector('.back-to-top');
 
-
-// If button doesn't exist, create it automatically
-
 if (!backToTop) {
 
     backToTop =
         document.createElement('button');
 
-    backToTop.className = 'back-to-top';
+    backToTop.className =
+        'back-to-top';
 
     backToTop.innerHTML =
         '<i class="fas fa-arrow-up"></i>';
@@ -494,8 +498,6 @@ if (!backToTop) {
 
 }
 
-
-// Show / hide button
 
 window.addEventListener('scroll', () => {
 
@@ -512,13 +514,13 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Scroll to top
-
 backToTop.addEventListener('click', () => {
 
     window.scrollTo({
+
         top: 0,
         behavior: 'smooth'
+
     });
 
 });
@@ -527,10 +529,6 @@ backToTop.addEventListener('click', () => {
 // ======================================================
 // 13. CONTACT FORM
 // ======================================================
-//
-// This does not require a backend.
-// It opens the user's email client using mailto.
-//
 
 const contactForm =
     document.querySelector('#contact-form');
@@ -558,18 +556,20 @@ if (contactForm) {
 
 
         const name =
-            nameInput ? nameInput.value.trim() : '';
+            nameInput ?
+            nameInput.value.trim() :
+            '';
 
         const email =
-            emailInput ? emailInput.value.trim() : '';
+            emailInput ?
+            emailInput.value.trim() :
+            '';
 
         const message =
             messageInput ?
             messageInput.value.trim() :
             '';
 
-
-        // Basic validation
 
         if (!name || !email || !message) {
 
@@ -582,8 +582,6 @@ if (contactForm) {
 
         }
 
-
-        // Email validation
 
         const emailPattern =
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -599,8 +597,6 @@ if (contactForm) {
 
         }
 
-
-        // Create email
 
         const subject =
             encodeURIComponent(
@@ -626,9 +622,8 @@ if (contactForm) {
             body;
 
 
-        // Open email client
-
-        window.location.href = mailtoLink;
+        window.location.href =
+            mailtoLink;
 
 
         showToast(
@@ -645,13 +640,16 @@ if (contactForm) {
 // 14. TOAST MESSAGE
 // ======================================================
 
-function showToast(message, type = 'success') {
+function showToast(
+    message,
+    type = 'success'
+) {
 
     let toast =
-        document.querySelector('.portfolio-toast');
+        document.querySelector(
+            '.portfolio-toast'
+        );
 
-
-    // Create toast if not available
 
     if (!toast) {
 
@@ -666,7 +664,8 @@ function showToast(message, type = 'success') {
     }
 
 
-    toast.textContent = message;
+    toast.textContent =
+        message;
 
     toast.classList.remove(
         'success',
@@ -677,16 +676,12 @@ function showToast(message, type = 'success') {
     toast.classList.add(type);
 
 
-    // Small delay for animation
-
     setTimeout(() => {
 
         toast.classList.add('show');
 
     }, 10);
 
-
-    // Hide after 3 seconds
 
     setTimeout(() => {
 
@@ -705,34 +700,39 @@ document.querySelectorAll(
     'a[href^="#"]'
 ).forEach(anchor => {
 
-    anchor.addEventListener('click', function(event) {
+    anchor.addEventListener(
+        'click',
+        function(event) {
 
-        const targetId =
-            this.getAttribute('href');
+            const targetId =
+                this.getAttribute('href');
 
-        if (
-            !targetId ||
-            targetId === '#'
-        ) {
-            return;
+            if (
+                !targetId ||
+                targetId === '#'
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+
+                    behavior: 'smooth',
+                    block: 'start'
+
+                });
+
+            }
+
         }
-
-
-        const target =
-            document.querySelector(targetId);
-
-        if (target) {
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-
-        }
-
-    });
+    );
 
 });
 
@@ -740,12 +740,6 @@ document.querySelectorAll(
 // ======================================================
 // 16. PROJECT SCREEN - HASH SUPPORT
 // ======================================================
-//
-// If someone opens:
-// website.com/#project1
-//
-// The project screen can automatically open.
-//
 
 window.addEventListener('load', () => {
 
@@ -759,7 +753,9 @@ window.addEventListener('load', () => {
 
     if (
         target &&
-        target.classList.contains('project-screen')
+        target.classList.contains(
+            'project-screen'
+        )
     ) {
 
         target.classList.add('active');
@@ -776,23 +772,28 @@ window.addEventListener('load', () => {
 // 17. HANDLE BROWSER BACK BUTTON
 // ======================================================
 
-window.addEventListener('popstate', () => {
+window.addEventListener(
+    'popstate',
+    () => {
 
-    const activeScreen =
-        document.querySelector(
-            '.project-screen.active'
-        );
+        const activeScreen =
+            document.querySelector(
+                '.project-screen.active'
+            );
 
-    if (activeScreen) {
+        if (activeScreen) {
 
-        activeScreen.classList.remove('active');
+            activeScreen.classList.remove(
+                'active'
+            );
 
-        document.body.style.overflow =
-            'auto';
+            document.body.style.overflow =
+                'auto';
+
+        }
 
     }
-
-});
+);
 
 
 // ======================================================
@@ -834,7 +835,9 @@ document.querySelectorAll('img').forEach(image => {
 // ======================================================
 
 const yearElements =
-    document.querySelectorAll('.current-year');
+    document.querySelectorAll(
+        '.current-year'
+    );
 
 yearElements.forEach(element => {
 

@@ -101,19 +101,13 @@ button {
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
-
     padding: 0.6rem 1rem;
-
     background: #38bdf8;
     color: #0f172a;
-
     border-radius: 6px;
-
     font-size: 0.82rem;
     font-weight: 600;
-
     transition: 0.3s;
-
     white-space: nowrap;
 }
 
@@ -241,9 +235,17 @@ section {
 }
 
 @keyframes pulseStatus {
-    0% { opacity: 1; }
-    50% { opacity: 0.4; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -545,7 +547,7 @@ section {
 }
 
 
-/* UPDATED: PROJECT LOGO AREA */
+/* PROJECT LOGO AREA */
 
 .card-logo {
     width: 100%;
@@ -821,9 +823,6 @@ section {
     color: white;
 }
 
-
-/* NEW: LIVE APP BUTTON */
-
 .live-btn {
     background: #6366f1;
     color: #ffffff;
@@ -833,9 +832,6 @@ section {
     background: #4f46e5;
     color: #ffffff;
 }
-
-
-/* NEW: OPTIONAL LINK STATUS */
 
 .optional-link-status {
     display: inline-flex;
@@ -849,6 +845,62 @@ section {
 
 .optional-link-status i {
     color: #f59e0b;
+}
+
+
+/* =======================================
+   TOAST MESSAGE
+======================================= */
+
+.portfolio-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 25px);
+
+    min-width: 280px;
+    max-width: 90%;
+    padding: 0.9rem 1.3rem;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 20000;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+    pointer-events: none;
+}
+
+.portfolio-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.portfolio-toast.success {
+    border-color: #10b981;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.18);
+}
+
+.portfolio-toast.error {
+    border-color: #f59e0b;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.18);
 }
 
 
@@ -1238,6 +1290,18 @@ footer p {
     .card-logo img {
         width: 125px;
         height: 125px;
+    }
+
+
+    /* Toast */
+
+    .portfolio-toast {
+        bottom: 20px;
+        min-width: 0;
+        width: calc(100% - 30px);
+        max-width: 420px;
+        font-size: 0.82rem;
+        padding: 0.8rem 1rem;
     }
 
 

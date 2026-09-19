@@ -702,7 +702,6 @@
 
             <h2>My Resume</h2>
 
-            <!-- Modern Download Resume Button -->
             <a href="resume.pdf"
                download="Md_Shakinul_Islam_Resume.pdf"
                class="btn primary resume-download-btn"
@@ -1430,16 +1429,9 @@
 
     <script>
 
-        /*
-         * Handle unavailable APK files and Live Demo links.
-         * Existing project functionality remains unchanged.
-         */
-
         document.addEventListener('DOMContentLoaded', function () {
 
-            // ==========================================
             // LIVE DEMO LINKS
-            // ==========================================
 
             document.querySelectorAll('.optional-live-link').forEach(function (link) {
 
@@ -1447,7 +1439,6 @@
 
                     const href = link.getAttribute('href');
 
-                    // If no real link is provided
                     if (
                         !href ||
                         href === '' ||
@@ -1478,9 +1469,7 @@
             });
 
 
-            // ==========================================
             // APK FILES
-            // ==========================================
 
             document.querySelectorAll('.optional-file-link').forEach(function (link) {
 
@@ -1511,11 +1500,6 @@
                     }
 
 
-                    /*
-                     * Check whether the APK file actually exists.
-                     * If the file is missing, prevent browser error/404.
-                     */
-
                     event.preventDefault();
 
                     fetch(filePath, {
@@ -1525,7 +1509,6 @@
 
                         if (response.ok) {
 
-                            // File exists → continue normal download
                             const downloadLink =
                                 document.createElement('a');
 
